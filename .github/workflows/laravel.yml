@@ -2,14 +2,12 @@ name: Laravel
 
 on:
   push:
-    branches: [ "staging", "development", "milestone/*" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "staging", "development", "milestone/*" ]
 
 jobs:
   development-tests:
     name: Run Test for Development
-    if: ${{ github.ref != 'refs/heads/main' || github.ref != 'refs/heads/staging'}}
+    if: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/staging'}}
     runs-on: ubuntu-latest
 
     steps:

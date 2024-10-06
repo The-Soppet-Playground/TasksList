@@ -33,11 +33,11 @@ class FetchTasksTest extends TestCase
         // Create test data
         Tasks::factory()->count(10)->create();
 
-        $task_id = Tasks::all()->random()->id;
-        $task = Tasks::find($task_id);
+        $randomTask = Tasks::all()->random();
+        $task = Tasks::find($randomTask->id);
 
         $this->assertInstanceOf(Tasks::class, $task);
-        $this->assertEquals($task_id, $task->id);
+        $this->assertEquals($randomTask, $task);
     }
 
     #[Test]

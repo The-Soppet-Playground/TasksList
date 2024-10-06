@@ -9,6 +9,7 @@ additional_fqdns: []
 database:
     type: mariadb
     version: "10.11"
+performance_mode: mutagen
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
@@ -102,9 +103,8 @@ corepack_enable: false
 
 # upload_dirs: "custom/upload/dir"
 #
-# upload_dirs:
-#   - custom/upload/dir
-#   - ../private
+upload_dirs:
+  - ../private
 #
 # would set the destination paths for ddev import-files to <docroot>/custom/upload/dir
 # When Mutagen is enabled this path is bind-mounted so that all the files

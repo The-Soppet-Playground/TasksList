@@ -40,6 +40,15 @@ class UpdateTask extends Component
             ->with('status', 'Task updated!');
     }
 
+    public function deleteTask()
+    {
+        $model = new Tasks();
+        $model->deleteTask($this->task);
+
+        return redirect()->to('/tasks')
+            ->with('status', 'Task deleted!');
+    }
+
     public function render()
     {
         return view('livewire.tasks.update-task', [

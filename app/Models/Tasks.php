@@ -62,4 +62,11 @@ class Tasks extends Model
 
         return $task->first();
     }
+
+    public function deleteTask(Tasks $task): null
+    {
+        $task->delete();
+
+        return Tasks::find($task)->first();
+    }
 }

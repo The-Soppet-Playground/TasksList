@@ -17,6 +17,7 @@
                 <input type="textarea" wire:model="comment" />
             </p>
             <button type="submit">Submit</button>
+            <button type="button" wire:click="deleteTask">Delete</button>
         </form>
     @endif
 </div>

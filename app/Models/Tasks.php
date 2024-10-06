@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,5 +24,18 @@ class Tasks extends Model
             'is_done' => 'boolean',
             'task_date' => 'date'
         ];
+    }
+
+
+    /**
+     * Get tasks list
+     *
+     * fetch data from database and transform into list
+     *
+     * @return \Illuminate\Database\Eloquent\Collection<int, Tasks>
+     */
+    public function fetchTasks(): Collection
+    {
+        return $this->all();
     }
 }

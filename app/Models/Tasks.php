@@ -13,13 +13,15 @@ class Tasks extends Model
         'title',
         'description',
         'comment',
-        'is_done'
+        'is_done',
+        'task_date'
     ];
 
     protected function casts()
     {
         return [
-            'is_done' => 'boolean'
+            'is_done' => 'boolean',
+            'task_date' => 'date'
         ];
     }
 }

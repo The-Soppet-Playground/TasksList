@@ -38,4 +38,19 @@ class Tasks extends Model
     {
         return $this->all();
     }
+
+    /**
+     * Create Tasks
+     *
+     * Inputted data will be saved in the database
+     *
+     * @return \App\Models\Tasks
+     */
+    public function createTask($data): Tasks
+    {
+        $data['task_date'] = now();
+        $result = $this->create($data);
+
+        return $result;
+    }
 }

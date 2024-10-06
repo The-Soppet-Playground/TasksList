@@ -13,7 +13,6 @@ class FetchTasksTest extends TestCase
 {
     use RefreshDatabase;
 
-
     #[Test]
     public function it_returns_a_collection_of_models()
     {
@@ -35,7 +34,7 @@ class FetchTasksTest extends TestCase
         Tasks::factory()->count(10)->create();
 
         $task_id = Tasks::all()->random()->id;
-        $task = Tasks::where(['id' => $task_id])->first();
+        $task = Tasks::find($task_id);
 
         $this->assertInstanceOf(Tasks::class, $task);
         $this->assertEquals($task_id, $task->id);

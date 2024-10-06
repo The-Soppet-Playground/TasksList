@@ -50,7 +50,23 @@ class Tasks extends Model
     {
         $data['task_date'] = now();
         $result = $this->create($data);
+        if(!$result) return null;
 
         return $result;
+    }
+
+    public function updateTask(Tasks $task, $data): Tasks
+    {
+        $result = $task->update($data);
+        if (!$result) return null;
+
+        return $task->first();
+    }
+
+    public function deleteTask(Tasks $task): null
+    {
+        $task->delete();
+
+        return Tasks::find($task)->first();
     }
 }

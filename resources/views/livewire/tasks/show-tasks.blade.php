@@ -4,12 +4,10 @@
             <p>{{ $task->title }}</p>
             <p>{{ $task->description }}</p>
             <p>
-                @if ($task->is_done)
-                    <input type="checkbox" checked value="Done">
-                @else
-                    <input type="checkbox" value="Done">
-                @endif
+                Done: <input type="checkbox" @if ($task->is_done) checked @endif
+                    value="Done" disabled>
             </p>
         </div>
+        <button type="button" wire:click="updateTask">Update</button>
     @endif
 </div>

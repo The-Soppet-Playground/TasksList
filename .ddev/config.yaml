@@ -104,7 +104,8 @@ corepack_enable: false
 # upload_dirs: "custom/upload/dir"
 #
 upload_dirs:
-  - ../private
+  - custom/upload/dir
+#   - ../private
 #
 # would set the destination paths for ddev import-files to <docroot>/custom/upload/dir
 # When Mutagen is enabled this path is bind-mounted so that all the files

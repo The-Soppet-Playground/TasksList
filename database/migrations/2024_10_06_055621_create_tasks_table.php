@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->string('comment');
-            $table->boolean('is_done');
-            $table->date('task_date');
+            $table->string('comment')->nullable();
+            $table->boolean('is_done')->nullable()->default(false);
+            $table->date('task_date')->nullable();
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class ListTasks extends Component
 
     public function setTask(Tasks $task)
     {
-        $this->dispatch('setTask', $task);
+        $this->dispatch('tasks.set-task', $task);
     }
 
     public function render()

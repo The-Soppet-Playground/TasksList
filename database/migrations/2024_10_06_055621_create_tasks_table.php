@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('comment')->nullable();
             $table->boolean('is_done')->nullable()->default(false);
-            $table->date('task_date')->nullable();
+            $table->date('task_date');
             $table->timestamps();
         });
     }

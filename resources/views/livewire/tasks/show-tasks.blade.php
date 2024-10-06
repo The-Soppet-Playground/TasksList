@@ -1,12 +1,5 @@
 <div>
-    <ul>
-        @foreach ($tasks as $t)
-            <li><button wire:click="setTask({{ $t->id }})">{{ $t->title }}</button></li>
-        @endforeach
-    </ul>
-
-    {{-- Like modal for tasks view --}}
-    @if ($task)
+    @if (!empty($task))
         <div>
             <p>{{ $task->title }}</p>
             <p>{{ $task->description }}</p>

@@ -16,8 +16,8 @@
                 Comment:
                 <input type="textarea" wire:model="comment" />
             </p>
-            <button type="submit">Submit</button>
-            <button type="button" wire:click="deleteTask">Delete</button>
+            <livewire:components.button type="submit" label="Submit" />
+            <livewire:components.button type="button" label="Delete" target="update-task.delete-task" />
         </form>
     @endif
 </div>

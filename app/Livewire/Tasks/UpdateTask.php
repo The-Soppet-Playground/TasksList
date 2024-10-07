@@ -40,6 +40,7 @@ class UpdateTask extends Component
             ->with('status', 'Task updated!');
     }
 
+    #[On('update-task.delete-task')]
     public function deleteTask()
     {
         $model = new Tasks();

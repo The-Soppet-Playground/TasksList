@@ -26,6 +26,8 @@ class CreateTasks extends Component
 
     public function render()
     {
-        return view('livewire.tasks.create-tasks');
+        return view('livewire.tasks.create-tasks', [
+            'title' => $this->title
+        ]);
     }
 }

@@ -27,5 +27,7 @@ class CreateTasksTest extends TestCase
         $this->assertEquals($title, $task->title);
         $this->assertEquals($description, $task->description);
         $this->assertEquals(now()->format('Y-m-d'), date_format($task->task_date, 'Y-m-d'));
+        $this->assertEquals(false, $task->is_done);
+        $this->assertEmpty($task->comment);
     }
 }

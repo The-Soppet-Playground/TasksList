@@ -16,6 +16,7 @@ class ShowTasks extends Component
         $this->task = $task;
     }
 
+    #[On('tasks.update-task')]
     public function updateTask()
     {
         $this->dispatch('update-task.set-task', $this->task);

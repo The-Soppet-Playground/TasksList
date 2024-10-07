@@ -8,6 +8,6 @@
                     value="Done" disabled>
             </p>
         </div>
-        <button type="button" wire:click="updateTask">Update</button>
+        <livewire:components.button type="button" label="Update" target="tasks.update-task" />
     @endif
 </div>
